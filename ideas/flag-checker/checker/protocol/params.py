@@ -8,4 +8,4 @@ class DH:
 
 
 class RSA:
-    e = 13337
+    e = 3307

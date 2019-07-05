@@ -13,7 +13,7 @@ def make_socket(host, port, timeout=3):
 
 
 def main():
-    host, port = '0.0.0.0', 5555
+    host, port = '0.0.0.0', 3307
     sock = make_socket(host, port)
 
     io = SocketIO(sock)

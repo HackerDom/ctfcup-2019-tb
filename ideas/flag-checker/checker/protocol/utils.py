@@ -15,7 +15,7 @@ def make_prime(nbits):
 def long_to_bytes(n):
     bitlen = n.bit_length()
     nbits = (bitlen + 7) >> 3
-    return n.to_bytes(nbits, 'little')
+    return n.to_bytes(nbits, 'big')
 
 def bytes_to_long(b):
-    return int.from_bytes(b, 'little')
+    return int.from_bytes(b, 'big')
