@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 import re
 
@@ -16,13 +16,13 @@ def encrypt(plaintext, key):
 
 
 def strip_format(flag):
-    match = re.match(rb'^CTFCup\{(\w+)\}$', flag)
+    match = re.match(rb'^Cup\{(\w+)\}$', flag)
     return match.group(1)
 
 
 def main():
-    key = read_file('key')
-    flag = read_file('flag')
+    key = read_file('key.txt')
+    flag = read_file('flag.txt')
     plaintext = strip_format(flag)
     ciphertext = encrypt(2 * plaintext, key)
     print(ciphertext.hex())
