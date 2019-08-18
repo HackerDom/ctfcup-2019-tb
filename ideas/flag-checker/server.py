@@ -3,6 +3,7 @@
 import sys
 import params
 
+from signal import alarm
 from protocol import IO, NoEncryption, RSAEncryption
 
 
@@ -34,6 +35,7 @@ def main(flag):
 
 
 if __name__ == '__main__':
+    alarm(30)
     with open('flag.txt', 'r') as file:
         flag = file.read().strip()
     try:
