@@ -1,6 +1,6 @@
 # CTF Cup 2019 | Task-based
 
-### Zero-knowledge Proof
+### Big secret
 
 Give to participants:
-- `task.py`
+- `server.py`

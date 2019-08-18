@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
 from math import gcd
 from signal import alarm
@@ -77,10 +77,8 @@ def interact(bits, secret, public_key):
     print('Bye!')
 
 
-def main():
+def main(flag):
     exponent = 31337
-    with open('flag.txt', 'rb') as file:
-        flag = file.read()
     secret = bytes_to_long(flag)
     bits = secret.bit_length()
     tc = TrustCenter(bits)
@@ -90,7 +88,9 @@ def main():
 
 if __name__ == '__main__':
     alarm(30)
+    with open('flag.txt', 'rb') as file:
+        flag = file.read()
     try:
-        main()
+        main(flag)
     except Exception as e:
         print('Error:', e)
