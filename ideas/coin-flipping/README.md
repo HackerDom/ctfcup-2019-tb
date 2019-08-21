@@ -1,7 +1,6 @@
 # CTF Cup 2019 | Task-based
 
-### Encrypted image
+### Coin flipping
 
 Give to participants:
-- `task.py`
-- `flag.png.enc`
+- `server.py`
