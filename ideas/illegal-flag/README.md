@@ -1,6 +1,6 @@
 # CTF Cup 2019 | Task-based
 
-### ??? (TBD)
+### Illegal flag
 
 Give to participants:
 - `flag.mono`
