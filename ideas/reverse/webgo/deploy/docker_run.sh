@@ -1,0 +1,1 @@
+docker run -d -p 8383:7777 ctfcup2019_taskbased_webgo
