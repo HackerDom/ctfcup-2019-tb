@@ -1,6 +1,6 @@
 # CTF Cup 2019 | Task-based
 
-### Data leak
+### Leaked docs
 
 Give to participants:
 - `transmission.wav`
