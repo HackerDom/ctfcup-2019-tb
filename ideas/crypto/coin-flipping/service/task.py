@@ -3,7 +3,6 @@
 import json
 
 from os import urandom
-from signal import alarm
 from collections import OrderedDict
 
 from random import shuffle
@@ -95,7 +94,6 @@ def main(flag):
 
 
 if __name__ == '__main__':
-    alarm(60)
     with open('flag.txt', 'r') as file:
         flag = file.read().strip()
     try:
