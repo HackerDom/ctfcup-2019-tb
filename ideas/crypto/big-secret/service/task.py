@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from math import gcd
-from signal import alarm
 from random import getrandbits
 from collections import namedtuple
 
@@ -87,7 +86,6 @@ def main(flag):
 
 
 if __name__ == '__main__':
-    alarm(30)
     with open('flag.txt', 'rb') as file:
         flag = file.read()
     try:
