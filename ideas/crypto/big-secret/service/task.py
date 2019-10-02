@@ -67,9 +67,9 @@ def interact(bits, secret, public_key):
     while True:
         print('\n=== VERIFICATION ROUND ===')
         gq = GuillouQuisquater(bits, secret, public_key)
-        print('a == r ** e (mod n):', gq.get_public_multiplier())
+        print('a:', gq.get_public_multiplier())
         c = int(input('c: '))
-        print('z == r * (x ** c) (mod n):', gq.compute_witness(c))
+        print('z:', gq.compute_witness(c))
         print('now check that z ** e == a * (y ** c) (mod n)')
         if not input('again? (y/n): ').lower().startswith('y'):
             break
