@@ -1,5 +1,29 @@
 import sys
 
+def GenRandomValue( seed ): 
+    return (seed >> 1) & 0xff
+
+def GenGamma( seed, sz ):
+    gamma = []
+
+    for i in range( 0, sz ):
+        value = GenRandomValue( seed )
+        seed += value
+        gamma.append( value )
+
+    return gamma
+
+def XorStringWithRandomGamma( string ):
+	res = ''
+
+	seed = len( string )
+	gamma = GenGamma( seed, seed )
+
+	for i in range( len( gamma ) ):
+		res += chr( ord( string[ i ] ) ^ gamma[ i ] )
+
+	return res 
+
 if __name__ == "__main__":
 
 	if len( sys.argv ) > 1:
@@ -16,23 +40,16 @@ if __name__ == "__main__":
 	file_offset += 1
 
 	EncodedUsername = buf[ file_offset : file_offset + UsernameSize ]
-	DecodedUsername = ''
-
-	for i in EncodedUsername:
-		DecodedUsername += chr( ord( i ) ^ UsernameSize ) 
+	DecodedUsername = XorStringWithRandomGamma( EncodedUsername )
 
 	file_offset += UsernameSize
-	print "Username: ", DecodedUsername
-
+	
 	PasswordSize = ord( buf[ file_offset ] )
 	file_offset += 1 
 
 	EncodedPassword = buf[ file_offset : PasswordSize + file_offset ]
-	DecodedPassword = ''
+	DecodedPassword = XorStringWithRandomGamma( EncodedPassword )
 
-	for i in EncodedPassword:
-		DecodedPassword += chr( ord( i ) ^ PasswordSize )
-
+	print "Username: ", DecodedUsername
 	print "Password: ", DecodedPassword
-
 	print "Use Username and Password for ./acw and view info!"

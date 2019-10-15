@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <vector>
 #include <iterator>
 #include <fstream>
@@ -18,6 +18,8 @@ typedef unsigned char BYTE;
 typedef unsigned int DWORD;
 
 std::vector<BYTE> ReadFile( std::string );
+unsigned long GetRandomValue( unsigned long ); 
+std::vector<int> GenGamma( int, int );
 
 class Wallet {
 	private:
@@ -131,9 +133,11 @@ bool Wallet::Decrypt( void )
 		return false;
 	}
 
+	std::vector<int> UsernameGamma = GenGamma( OriginalUsernameSize, OriginalUsernameSize );
+
 	for ( int i = 0; i < OriginalUsernameSize; i++ )
 	{
-		if ( ( RawData[ file_offset + i ] ^ OriginalUsernameSize ) != Username[ i ] )
+		if ( ( RawData[ file_offset + i ] ^ UsernameGamma[ i ] ) != Username[ i ] )
 		{
 			return false;
 		}
@@ -150,9 +154,11 @@ bool Wallet::Decrypt( void )
 		return false;
 	}
 
+	std::vector<int> PasswordGamma = GenGamma( OriginalPasswordSize, OriginalPasswordSize );
+
 	for ( int i = 0; i < OriginalPasswordSize; i++ )
 	{
-		if ( ( RawData[ file_offset + i ] ^ OriginalPasswordSize ) != Passsword[ i ] )
+		if ( ( RawData[ file_offset + i ] ^ PasswordGamma[ i ] ) != Passsword[ i ] )
 		{
 			return false;
 		}
@@ -224,4 +230,25 @@ void Wallet::ViewLastOperations( void )
 	{
 		std::cout << i << ". " << last_operations[ i ] << std::endl;
 	}
+};
+
+unsigned long GetRandomValue( unsigned long seed )
+{
+  return (seed >> 1) & 0xff;
+};
+
+std::vector<int> GenGamma( int seed, int sz )
+{
+	std::vector<int> gamma;
+
+	int value = seed;
+
+	for ( int i = 0; i < sz; i++ )
+	{
+		value = GetRandomValue( seed );
+		seed += value;
+		gamma.push_back( value );
+	}
+
+	return gamma;
 };

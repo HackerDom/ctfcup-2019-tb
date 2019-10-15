@@ -6,13 +6,42 @@ p32 = lambda val : struct.pack( "!L", val )
 BLANCE_KEY = 0xdeadbeef
 
 FLAG = 'Cup{901caa40579a07ee5912514eebaf5526742ad03261971b233fd1cb88eee915ae}'
-templates = ['debiting from the account %d arbc', 
-'crediting to a wallet %d arbc']
+templates = ['debiting from the account %d arbc to %s account', 
+'crediting from %s to a wallet %d arbc']
 
 alph = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789'
 
-def idg( size = 12, chars=alph ):
+def idg( size = 16, chars=alph ):
 	return ''.join( random.choice( chars ) for _ in range( size ) )
+
+def GenRandomValue( seed ):
+    S = seed
+
+    S = ((((S >> 31) ^ (S >> 30) ^ (S >> 29) ^ (S >> 27) ^ (S >> 25) ^ S ) & 0x00000001 ) << 31 ) | (S >> 1)
+
+    return S & 0xff
+
+def GenGamma( seed, sz ):
+    gamma = []
+
+    for i in range( 0, sz ):
+        value = GenRandomValue( seed )
+        seed += value
+        gamma.append( value )
+
+    return gamma
+
+def XorStringWithRandomGamma( string ):
+	res = ''
+
+	seed = len( string )
+	gamma = GenGamma( seed, seed )
+
+	for i in range( len( gamma ) ):
+		res += chr( ord( string[ i ] ) ^ gamma[ i ] )
+
+	return res 
+
 
 class Wallet:
 	login = None
@@ -31,8 +60,16 @@ class Wallet:
 
 	def gen_random_operations( self ):
 		global templates
-		for i in range( 1, random.randint( 2, 20 ) ):
-			self.last_operations.append( templates[ random.randint( 0, 1 ) ] % random.randint( 1, 512 ) )
+		for i in range( 10, random.randint( 11, 40 ) ):
+
+			template_id = random.randint( 0, 1 )
+
+			if template_id == 0:
+				self.last_operations.append( templates[ template_id ] 
+					% ( random.randint( 100, 512 ), idg() ) )
+			else:
+				self.last_operations.append( templates[ template_id ]
+				 % (  idg(), random.randint( 100, 512 ) ) )
 
 	def pack_operations( self ):
 		for i in range( len( self.last_operations ) ):			
@@ -57,14 +94,10 @@ class Wallet:
 		fd = open( filename, 'wb' )
 
 		fd.write( chr( len( self.login ) ) )
-
-		for i in range( len( self.login ) ):
-			fd.write( chr( ord( self.login[ i ] ) ^ len( self.login ) ) )
+		fd.write( XorStringWithRandomGamma( self.login ) )
 
 		fd.write( chr( len( self.password ) ) )
-
-		for i in range( len( self.password ) ):
-			fd.write( chr( ord( self.password[ i ] ) ^ len( self.password ) ) )
+		fd.write( XorStringWithRandomGamma( self.password ) )
 
 		self.balance ^= BLANCE_KEY
 		fd.write( p32( self.balance ) )
@@ -91,10 +124,10 @@ class Wallet:
 
 if __name__ == "__main__":
 
-	Username = 'Admin'
-	Password = 'Password'
+	Username = idg( random.randint( 16, 32 ) )
+	Password = idg( random.randint( 32, 64 ) )
 
 	wallet = Wallet( Username, Password, FLAG )
 
-	wallet.pack_file( "test_file" )
+	wallet.pack_file( "test_wallet.acw" )
 
