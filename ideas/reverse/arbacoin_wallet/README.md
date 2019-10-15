@@ -21,7 +21,7 @@
 
 ```sh
 cd deploy
-# cange port in run.sh
+# change port in run.sh
 ./serve.sh 
 ```
 
