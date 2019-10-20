@@ -38,33 +38,9 @@ def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
 
     return "".join([hex(x)[2:].zfill(8) for x in [A, B, C, D, E]])
 
-def recv(sock):
-    data = b""
-
-    while True:
-        try:
-            a = sock.recv(1024)
-            if not a:
-                break
-            data += a
-        except:
-            break
-
-    return data
-
-def send_command(command):
-    sock = socket()
-    sock.settimeout(2)
-    sock.connect((HOST, PORT))
-    recv(sock)
-    sock.send((command + "\n").encode())
-    data = recv(sock).decode()[:-1]
-    return data
-
-user_name = "leo5"
-hash = send_command("m_reg a_login={0}".format(user_name))
+user_name = "123"
+hash = "4793cd3b570132d23bee26af8d604b6c94eb583a"
 print(hash)
 append_data = "admin"
 new_hash = calculate_hash(hash, append_data, len(user_name))
-flag = send_command("m_flag a_login={2}{0} u_{1}".format(append_data, new_hash, user_name))
-print(flag)
+print(user_name + append_data, new_hash)
