@@ -60,4 +60,4 @@ ELF 64bit, C++, no strip, no pack.
 
 ## Флаг
 
-`Cup{901caa40579a07ee5912514eebaf5526742ad03261971b233fd1cb88eee915ae}}`
+`Cup{901caa40579a07ee5912514eebaf5526742ad03261971b233fd1cb88eee915ae}`
