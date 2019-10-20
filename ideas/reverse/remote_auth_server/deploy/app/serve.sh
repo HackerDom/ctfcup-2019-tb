@@ -1,0 +1,1 @@
+while true; do socat -d TCP4-LISTEN:7171,reuseaddr,fork,keepalive exec:./ras; sleep 3; done
