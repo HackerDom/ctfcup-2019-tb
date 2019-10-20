@@ -64,8 +64,8 @@ func (c *Conf) makeTable() {
 		c.table = MakeTable(reverse(c.Poly))
 		c.update = Update
 	} else {
-		c.table = MakeTableNBR(c.Poly)
-		c.update = UpdateNBR
+		c.table = MakeTable_(c.Poly)
+		c.update = Update_
 	}
 }
 
@@ -87,7 +87,7 @@ func MakeTable(poly uint16) *Table {
 	return t
 }
 
-func MakeTableNBR(poly uint16) *Table {
+func MakeTable_(poly uint16) *Table {
 	t := new(Table)
 	for i := 0; i < 256; i++ {
 		crc := uint16(i) << 8
@@ -110,7 +110,7 @@ func Update(crc uint16, tab *Table, p []byte) uint16 {
 	return crc
 }
 
-func UpdateNBR(crc uint16, tab *Table, p []byte) uint16 {
+func Update_(crc uint16, tab *Table, p []byte) uint16 {
 	for _, v := range p {
 		crc = tab[byte(crc>>8)^v] ^ (crc << 8)
 	}
