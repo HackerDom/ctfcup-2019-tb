@@ -30,8 +30,8 @@
 
 ```
 (&
-	(login=$login)
-	(password=$pass)
+    (login=$login)
+    (password=$pass)
 )
 ```
 
@@ -45,10 +45,10 @@ password=`1)`
 
 ```
 (&
-	(login=`admin)
-	(|
-		(mobile=*)
-		(password=1)
+    (login=`admin)
+    (|
+        (mobile=*)
+        (password=1)
     )
 )
 ```
