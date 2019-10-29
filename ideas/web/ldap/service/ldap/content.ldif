@@ -1,0 +1,19 @@
+dn: ou=People,dc=ldap,dc=cup,dc=ctf
+objectClass: organizationalUnit
+ou: People
+
+dn: sn=admin,ou=People,dc=ldap,dc=cup,dc=ctf
+cn: admin
+sn: admin
+objectClass: inetOrgPerson
+uid: as89ad898c890w78df908asdc907qwd87w8xu89q37er87as8x
+mobile: Cup{th3r3_4r3_n0t_0nly_sql_1nj3ct10ns}
+mail: admin@admin.ru
+
+dn: sn=test,ou=People,dc=ldap,dc=cup,dc=ctf
+cn: test
+sn: test
+objectClass: inetOrgPerson
+uid: test
+mobile: fake_flag
+mail: test@test.ru
