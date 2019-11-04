@@ -4,8 +4,7 @@ from math import gcd
 from random import getrandbits
 from collections import namedtuple
 
-from gmpy2 import next_prime
-from Crypto.Util.number import bytes_to_long
+from gmpy2 import next_prime, invert
 
 
 PublicKey = namedtuple('PublicKey', ['n', 'e', 'y'])
@@ -58,8 +57,9 @@ class GuillouQuisquater(object):
     def _generate_multiplier(self):
         r = 0
         while not 1 <= r <= self._key.n - 1:
-            r = getrandbits(self._bits)
-        return r
+            r = getrandbits(self._bits) ^ \
+                getrandbits(self._bits)
+        return int(invert(r, self._key.n))
 
 
 def interact(bits, secret, public_key):
@@ -77,9 +77,9 @@ def interact(bits, secret, public_key):
 
 
 def main(flag):
+    bits = 1024
     exponent = 31337
-    secret = bytes_to_long(flag)
-    bits = secret.bit_length()
+    secret = int(flag.hex(), 16)
     tc = TrustCenter(bits)
     public_key = tc.make_public_key(secret, exponent)
     interact(bits, secret, public_key)
