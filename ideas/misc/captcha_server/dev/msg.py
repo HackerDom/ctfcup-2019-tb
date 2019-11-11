@@ -17,7 +17,7 @@ class Msg:
 	EXIT = 'Close connection...\n'
 
 	SERVER_AWARD  = 'Thank you for your help. This is a your award: '
-	SERVER_AWARD += 'CupCTF{a6f6f28f15b85a6d0a2a0ae4c1460d97f5326f2cfe09fc1cf9ba663285bbca37}\n'
+	SERVER_AWARD += 'Cup{a6f6f28f15b85a6d0a2a0ae4c1460d97f5326f2cfe09fc1cf9ba663285bbca37}\n'
 	ANSWER_MSG    = '\nAnswer: '
 	SERVER_ANSWER_TIMEOUT = 'Time to solve is out!\n'
 	CORRECT_CAPTCHA = '[+] Correct!\n'
