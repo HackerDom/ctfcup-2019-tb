@@ -6,7 +6,7 @@
 #include "matrix.h"
 
 
-int flag_secret[T_FLAGLEN] = {64077, 18475, 39424, 44789, 32247, 63296, 38475, 63825, 61887, 12734, 14477, 40017, 22380, 35409, 15036, 7639, 48674, 37740, 4003, 48671, 54493, 41905, 12736, 37310, 62064, 13737, 20110, 21164, 53155, 50867, 1983, 45410, 62855, 11041, 27592, 1853, 29406, 3344, 58675, 47702};
+int flag_secret[T_FLAGLEN] = {127, 42909, 29628, 17335, 49205, 41212, 45413, 64027, 8313, 14166, 35491, 44347, 63132, 37883, 50076, 1293, 44114, 38684, 31489, 59717, 49715, 15411, 46932, 65366, 24, 54027, 55218, 33324, 43777, 31509, 8301, 45562, 56329, 38975, 22796, 23295, 14886, 2400, 3129, 26370};
 
 void init() {
     setvbuf(stdin, NULL, _IONBF, 0);
@@ -29,9 +29,13 @@ void fill_sizes(matrix_size_t* sizes, size_t len) {
 }
 
 void print_flag(matrix_t* matrix) {
-    size_t i;
+    matrix_size_t i, j;
 
     for (i = 0; i < T_FLAGLEN; ++i) {
-        putc((char)(M_get(matrix, i, 0) - flag_secret[i]), stdout);
+        for (j = 0; j < matrix->height; j++) {
+            flag_secret[i] ^= M_get(matrix, i, j);
+        }
+        
+        putc((char)flag_secret[i], stdout);
     }
 }
