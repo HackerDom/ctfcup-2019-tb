@@ -1,4 +1,4 @@
-# Misc | joKER trap
+# Misc | joKER's trap
 
 ## Информация
 
