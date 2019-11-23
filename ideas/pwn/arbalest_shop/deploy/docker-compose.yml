@@ -1,7 +1,11 @@
 version: '2.3'
 
 services:
+
   task:
+    container_name: arbalest_shop
+    image: arbalest_shop_image
+
     build: service
     restart: always
     ports:

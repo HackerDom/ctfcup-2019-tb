@@ -46,7 +46,9 @@ ADD libs/ ./var/task/libs
 ADD run.sh ./var/task/
 
 RUN chmod 444 ./tmp/flag.txt && \
-    chmod 111 ./var/task/run.sh
+    chmod 111 ./var/task/run.sh && \
+    chmod 111 ./var/task/ld-2.27.so && \
+    chmod 444 ./var/task/acm
 
 WORKDIR /
 
@@ -54,4 +56,4 @@ ADD nsjail/nsjail.sh /nsjail.sh
 RUN chmod 555 /nsjail.sh
 
 ENTRYPOINT ["/nsjail.sh"]
-CMD ["/var/task/run.sh"]
+CMD ["/var/task/ld-2.27.so", "--library-path", "/var/task/libs", "/var/task/acm" ]

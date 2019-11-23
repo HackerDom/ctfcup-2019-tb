@@ -2,6 +2,8 @@ version: '2.3'
 
 services:
   task:
+    container_name: arbacoin_bank
+    image: image_arbacoin_bank
     build: service
     restart: always
     ports:

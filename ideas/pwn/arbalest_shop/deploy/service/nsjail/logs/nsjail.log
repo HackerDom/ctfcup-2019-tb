@@ -86,3 +86,95 @@
 [I][2019-10-27T10:36:59+0000] New connection from: [::ffff:172.18.0.1]:46242 on: [::ffff:172.18.0.2]:31337
 [I][2019-10-27T10:36:59+0000] Executing '/var/task/arbalest_shop' for '[::ffff:172.18.0.1]:46242'
 [I][2019-10-27T10:37:08+0000] pid=9 ([::ffff:172.18.0.1]:46242) exited with status: 127, (PIDs left: 0)
+[I][2019-11-21T22:12:11+0000] Mode: LISTEN_TCP
+[I][2019-11-21T22:12:11+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-21T22:12:11+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-21T22:12:11+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-21T22:12:11+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-21T22:12:11+0000][9] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-21T22:12:11+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-21T22:12:11+0000][9] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-21T22:12:11+0000] Listening on [::]:31337
+[I][2019-11-21T22:12:36+0000] New connection from: [::ffff:172.18.0.1]:45998 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-21T22:12:36+0000] Executing '/var/task/arbalest_shop' for '[::ffff:172.18.0.1]:45998'
+[I][2019-11-21T22:12:37+0000] pid=10 ([::ffff:172.18.0.1]:45998) exited with status: 255, (PIDs left: 0)
+[I][2019-11-21T22:12:56+0000] New connection from: [::ffff:185.66.87.117]:44398 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-21T22:12:56+0000] Executing '/var/task/arbalest_shop' for '[::ffff:185.66.87.117]:44398'
+[I][2019-11-21T22:12:58+0000] pid=11 ([::ffff:185.66.87.117]:44398) exited with status: 255, (PIDs left: 0)
+[I][2019-11-21T22:13:08+0000] New connection from: [::ffff:94.25.175.120]:30424 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-21T22:13:08+0000] Executing '/var/task/arbalest_shop' for '[::ffff:94.25.175.120]:30424'
+[I][2019-11-21T22:13:09+0000] pid=12 ([::ffff:94.25.175.120]:30424) exited with status: 255, (PIDs left: 0)
+[I][2019-11-21T22:13:11+0000] New connection from: [::ffff:94.25.175.120]:54708 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-21T22:13:11+0000] Executing '/var/task/arbalest_shop' for '[::ffff:94.25.175.120]:54708'
+[I][2019-11-21T22:13:41+0000] pid=13 run time >= time limit (30 >= 30) ([::ffff:94.25.175.120]:54708). Killing it
+[I][2019-11-21T22:13:41+0000] pid=13 ([::ffff:94.25.175.120]:54708) terminated with signal: SIGKILL (9), (PIDs left: 0)
+[I][2019-11-22T19:12:23+0000] Mode: LISTEN_TCP
+[I][2019-11-22T19:12:23+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T19:12:23+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T19:12:23+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T19:12:23+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T19:12:23+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T19:12:23+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T19:12:23+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T19:12:23+0000] Listening on [::]:31337
+[I][2019-11-22T19:17:53+0000] Mode: LISTEN_TCP
+[I][2019-11-22T19:17:53+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T19:17:53+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T19:17:53+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T19:17:53+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T19:17:53+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T19:17:53+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T19:17:53+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T19:17:53+0000] Listening on [::]:31337
+[I][2019-11-22T19:57:26+0000] Mode: LISTEN_TCP
+[I][2019-11-22T19:57:26+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T19:57:26+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T19:57:26+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T19:57:26+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T19:57:26+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T19:57:26+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T19:57:26+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T19:57:26+0000] Listening on [::]:31337
+[I][2019-11-22T20:00:09+0000] Mode: LISTEN_TCP
+[I][2019-11-22T20:00:09+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T20:00:09+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T20:00:09+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T20:00:09+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T20:00:09+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T20:00:09+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T20:00:09+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T20:00:09+0000] Listening on [::]:31337
+[I][2019-11-22T20:00:55+0000] Mode: LISTEN_TCP
+[I][2019-11-22T20:00:55+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T20:00:55+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T20:00:55+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T20:00:55+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T20:00:55+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T20:00:55+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T20:00:55+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T20:00:55+0000] Listening on [::]:31337
+[I][2019-11-22T20:08:05+0000] Mode: LISTEN_TCP
+[I][2019-11-22T20:08:05+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T20:08:05+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T20:08:05+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T20:08:05+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T20:08:05+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T20:08:05+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T20:08:05+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T20:08:05+0000] Listening on [::]:31337
+[I][2019-11-23T20:49:07+0000] Mode: LISTEN_TCP
+[I][2019-11-23T20:49:07+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/arbalest_shop', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-23T20:49:07+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-23T20:49:07+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-23T20:49:07+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-23T20:49:07+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-23T20:49:07+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-23T20:49:07+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-23T20:49:07+0000] Listening on [::]:31337
+[I][2019-11-23T20:49:27+0000] New connection from: [::ffff:172.21.0.1]:38932 on: [::ffff:172.21.0.2]:31337
+[I][2019-11-23T20:49:27+0000] Executing '/var/task/arbalest_shop' for '[::ffff:172.21.0.1]:38932'
+[I][2019-11-23T20:49:29+0000] pid=9 ([::ffff:172.21.0.1]:38932) exited with status: 255, (PIDs left: 0)
+[I][2019-11-23T20:50:11+0000] New connection from: [::ffff:172.21.0.1]:38936 on: [::ffff:172.21.0.2]:31337
+[I][2019-11-23T20:50:11+0000] Executing '/var/task/arbalest_shop' for '[::ffff:172.21.0.1]:38936'
+[I][2019-11-23T20:50:41+0000] pid=10 run time >= time limit (30 >= 30) ([::ffff:172.21.0.1]:38936). Killing it
+[I][2019-11-23T20:50:41+0000] pid=10 ([::ffff:172.21.0.1]:38936) terminated with signal: SIGKILL (9), (PIDs left: 0)

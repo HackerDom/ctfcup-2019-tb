@@ -367,3 +367,73 @@
 [I][2019-11-16T00:05:50+0000] New connection from: [::ffff:192.168.16.1]:35650 on: [::ffff:192.168.16.2]:31337
 [I][2019-11-16T00:05:50+0000] Executing '/var/task/run.sh' for '[::ffff:192.168.16.1]:35650'
 [I][2019-11-16T00:05:50+0000] pid=39 ([::ffff:192.168.16.1]:35650) exited with status: 127, (PIDs left: 0)
+[I][2019-11-22T18:53:05+0000] Mode: LISTEN_TCP
+[I][2019-11-22T18:53:05+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T18:53:05+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T18:53:05+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T18:53:05+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T18:53:05+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T18:53:05+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T18:53:05+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T18:53:05+0000] Listening on [::]:31337
+[I][2019-11-22T18:53:51+0000] New connection from: [::ffff:172.18.0.1]:46024 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-22T18:53:51+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:172.18.0.1]:46024'
+[I][2019-11-22T18:53:51+0000] pid=9 ([::ffff:172.18.0.1]:46024) exited with status: 127, (PIDs left: 0)
+[I][2019-11-22T18:55:29+0000] Mode: LISTEN_TCP
+[I][2019-11-22T18:55:29+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T18:55:29+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T18:55:29+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T18:55:29+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T18:55:29+0000][9] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T18:55:29+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T18:55:29+0000][9] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T18:55:29+0000] Listening on [::]:31337
+[I][2019-11-22T18:55:35+0000] New connection from: [::ffff:172.18.0.1]:46028 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-22T18:55:35+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:172.18.0.1]:46028'
+[I][2019-11-22T18:55:37+0000] pid=10 ([::ffff:172.18.0.1]:46028) exited with status: 255, (PIDs left: 0)
+[I][2019-11-22T18:55:38+0000] New connection from: [::ffff:172.18.0.1]:46032 on: [::ffff:172.18.0.2]:31337
+[I][2019-11-22T18:55:38+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:172.18.0.1]:46032'
+[I][2019-11-22T18:55:42+0000] pid=11 ([::ffff:172.18.0.1]:46032) exited with status: 255, (PIDs left: 0)
+[I][2019-11-22T19:19:24+0000] Mode: LISTEN_TCP
+[I][2019-11-22T19:19:24+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T19:19:24+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T19:19:24+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T19:19:24+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T19:19:24+0000][9] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T19:19:24+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T19:19:24+0000][9] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T19:19:24+0000] Listening on [::]:31337
+[I][2019-11-22T19:56:38+0000] Mode: LISTEN_TCP
+[I][2019-11-22T19:56:38+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T19:56:38+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T19:56:38+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T19:56:38+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T19:56:38+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T19:56:38+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T19:56:38+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T19:56:38+0000] Listening on [::]:31337
+[I][2019-11-22T20:02:11+0000] Mode: LISTEN_TCP
+[I][2019-11-22T20:02:11+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-22T20:02:11+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-22T20:02:11+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-22T20:02:11+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-22T20:02:11+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-22T20:02:11+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-22T20:02:11+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-22T20:02:11+0000] Listening on [::]:31337
+[I][2019-11-23T20:11:07+0000] Mode: LISTEN_TCP
+[I][2019-11-23T20:11:07+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.27.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
+[I][2019-11-23T20:11:07+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
+[I][2019-11-23T20:11:07+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
+[I][2019-11-23T20:11:07+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
+[W][2019-11-23T20:11:07+0000][9] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
+[I][2019-11-23T20:11:07+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
+[W][2019-11-23T20:11:07+0000][9] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
+[I][2019-11-23T20:11:07+0000] Listening on [::]:31337
+[I][2019-11-23T20:24:16+0000] New connection from: [::ffff:172.20.0.1]:48994 on: [::ffff:172.20.0.2]:31337
+[I][2019-11-23T20:24:16+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:172.20.0.1]:48994'
+[I][2019-11-23T20:24:40+0000] pid=10 ([::ffff:172.20.0.1]:48994) exited with status: 0, (PIDs left: 0)
+[I][2019-11-23T20:24:54+0000] New connection from: [::ffff:185.66.87.117]:33274 on: [::ffff:172.20.0.2]:31337
+[I][2019-11-23T20:24:54+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:185.66.87.117]:33274'
+[I][2019-11-23T20:25:24+0000] pid=14 run time >= time limit (30 >= 30) ([::ffff:185.66.87.117]:33274). Killing it
+[I][2019-11-23T20:25:24+0000] pid=14 ([::ffff:185.66.87.117]:33274) terminated with signal: SIGKILL (9), (PIDs left: 0)

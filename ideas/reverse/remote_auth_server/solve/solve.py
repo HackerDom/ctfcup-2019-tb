@@ -3,7 +3,7 @@ from pwn import *
 LOCAL = False
 
 host = '127.0.0.1'
-port = 1337
+port = 33051
 
 
 Username = 'admin123' # retrive from sha256-hash in programm
