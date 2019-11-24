@@ -1,0 +1,15 @@
+version: '2.3'
+
+services:
+  task:
+    container_name: teleport
+    image: image_teleport
+    build: service
+    restart: always
+    ports:
+      - 33064:31337
+    pids_limit: 512
+    mem_limit: 128M
+    privileged: true
+    volumes:
+      - ./service/nsjail/logs/:/var/log/nsjail/
