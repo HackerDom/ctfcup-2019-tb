@@ -40,15 +40,13 @@ RUN mkdir ./tmp/ && \
 RUN mkdir -p ./var/task/
 
 ADD flag.txt ./tmp/
-ADD acm ./var/task/
-ADD ld-2.27.so ./var/task/
+ADD teleport ./var/task/
+ADD ld-2.29.so ./var/task/
 ADD libs/ ./var/task/libs
-ADD run.sh ./var/task/
 
 RUN chmod 444 ./tmp/flag.txt && \
-    chmod 111 ./var/task/run.sh && \
-    chmod 111 ./var/task/ld-2.27.so && \
-    chmod 444 ./var/task/acm
+    chmod 111 ./var/task/ld-2.29.so && \
+    chmod 444 ./var/task/teleport
 
 WORKDIR /
 
@@ -56,4 +54,4 @@ ADD nsjail/nsjail.sh /nsjail.sh
 RUN chmod 555 /nsjail.sh
 
 ENTRYPOINT ["/nsjail.sh"]
-CMD ["/var/task/ld-2.27.so", "--library-path", "/var/task/libs", "/var/task/acm" ]
+CMD ["/var/task/ld-2.29.so", "--library-path", "/var/task/libs", "/var/task/teleport" ]
