@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  app:
+    ports:
+      - '5000:5000'
+    build: .
+    environment:
+      SECRET_KEY: "asiaosiaosiaoix029e09c8d8v7ref98dc80f8bv9sdf"
+    depends_on:
+      - openldap
+
+  openldap:
+    image: 'dinkel/openldap'
+    volumes:
+      - "./ldap:/etc/ldap.dist/prepopulate"
+    environment:
+      SLAPD_PASSWORD: 'aska0sw9a0xc9s09de0s9xd0sdasa'
+      SLAPD_CONFIG_PASSWORD: "as90a9x0190a90sa90s9a0x"
+      SLAPD_DOMAIN: 'ldap.cup.ctf'
+      SLAPD_FORCE_RECONFIGURE: 'true'

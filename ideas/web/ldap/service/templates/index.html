@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Injection?</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <main>
+        <section class="center-block">
+            {% if card %}
+                <h1>{{ card.sn }}</h1>
+                <p>Mail: {{ card.mail }}</p>
+                <p>Mobile: <code>[censored]</code></p>
+            {% else %}
+                <p>User does not exist</p>
+            {% endif %}
+            <p><a href="/">Вернуться к поиску</a></p>
+        </section>
+    </main>
+</body>
+</html>
