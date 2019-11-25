@@ -11,9 +11,9 @@ ADD requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-ADD task.py flag.txt ./
+ADD server.py flag.txt ./
 
-RUN chmod 555 task.py && \
+RUN chmod 555 server.py && \
     chmod 444 flag.txt
 
-ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'timeout 60 ./task.py',su=task"]
+ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'timeout 60 ./server.py',su=task"]
