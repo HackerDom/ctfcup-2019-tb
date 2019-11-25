@@ -17,4 +17,4 @@ ADD ciphers/* ./ciphers/
 RUN chmod 555 server.py && \
     chmod 444 flag.txt ui.py ciphers/*
 
-ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'timeout 600 ./server.py',su=task"]
+ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'./server.py',su=task"]
