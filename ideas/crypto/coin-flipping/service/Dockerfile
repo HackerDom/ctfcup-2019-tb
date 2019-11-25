@@ -16,4 +16,4 @@ ADD server.py flag.txt ./
 RUN chmod 555 server.py && \
     chmod 444 flag.txt
 
-ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'timeout 60 ./server.py',su=task"]
+ENTRYPOINT ["socat", "TCP-LISTEN:31337,reuseaddr,fork", "EXEC:'timeout 300 ./server.py',su=task"]
