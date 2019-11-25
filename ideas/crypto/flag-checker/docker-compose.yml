@@ -4,7 +4,15 @@ services:
   task:
     build: service
     restart: always
-    ports:
-      - 33023:31337
+
+    mem_limit: 256M
+    memswap_limit: 256M
     pids_limit: 512
-    mem_limit: 128M
+
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 1024
+
+    ports:
+      - 40121:31337
