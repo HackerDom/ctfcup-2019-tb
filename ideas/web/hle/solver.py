@@ -1,8 +1,9 @@
-from socket import *
+import requests
 from math import sin
 
 HOST = "192.168.56.4"
 PORT = 4331
+URL = f"http://{HOST}:{PORT}/"
 
 def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
     hash_bytes = bytes.fromhex(hash)
@@ -38,6 +39,8 @@ def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
 
     return "".join([hex(x)[2:].zfill(8) for x in [A, B, C, D, E]])
 
+s = requests.Session()
+s.post()
 user_name = "123"
 hash = "4793cd3b570132d23bee26af8d604b6c94eb583a"
 print(hash)
