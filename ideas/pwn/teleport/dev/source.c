@@ -190,29 +190,10 @@ int main_menu( void )
 
 char* make_teleport( void )
 {
-	//int res;
-    
-  //  unsigned long * frame = __builtin_frame_address(0);
-    //unsigned long * tls;
-       
-//    res = arch_prctl( ARCH_GET_FS, &tls );
-
     char* teleport = mmap( 0, MAP_SIZE, PROT_READ | PROT_WRITE,  MAP_ANON | MAP_PRIVATE, -1, 0 );
     
     if ( teleport == MAP_FAILED )
         return NULL;
-    
-    // printf( "{.} addr: %p\n", teleport );
-    // printf( "{.} TLS %p , FRAME %p\n", tls, frame );
-    // printf( "{.} stack cookie: 0x%lx, from tls 0x%lx\n", frame[-1], tls[5] ); 
-    // printf( "{.} from mmap to TLS: 0x%lx\n", (char *)tls - (char*)teleport );
-    
-    // unsigned long diff = (char *)tls - (char*)teleport;
-    
-    // tcbhead_t *head = (tcbhead_t*)&teleport[ diff ];
-    
-    // printf( "{.} cookie from addr: 0x%lx\n", head->stack_guard );
-    // printf( "{.} cookie == stack_cookie? %d\n", head->stack_guard == frame[-1] );
 
     return teleport;
 }
