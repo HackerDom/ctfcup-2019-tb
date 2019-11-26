@@ -1,1 +1,1 @@
-training.png
+task/training.png
