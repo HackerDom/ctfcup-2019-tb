@@ -13,10 +13,10 @@ class HMAC(object):
         self._opad = b'\x5c' * HMAC.block_size
 
     @staticmethod
-    def generate():
-        key = urandom(HMAC.block_size)
+    def generate(bits):
+        key = urandom(bits // 8)
         key = key.rjust(HMAC.block_size, b'\x00')
-        return HMAC(key)
+        return HMAC(key[:HMAC.block_size])
 
     @property
     def publickey(self):

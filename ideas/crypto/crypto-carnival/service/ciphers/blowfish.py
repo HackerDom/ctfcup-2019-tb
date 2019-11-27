@@ -11,9 +11,10 @@ class Blowfish(object):
         self._cipher = cipher
 
     @staticmethod
-    def generate():
-        key = urandom(Blowfish.block_size * 4)
-        cipher = BlowfishCipher.new(key, mode=BlowfishCipher.MODE_ECB)
+    def generate(bits):
+        key = urandom(bits // 8)
+        key = key.rjust(Blowfish.block_size * 4, b'\x00')
+        cipher = BlowfishCipher.new(key[:Blowfish.block_size*4], mode=BlowfishCipher.MODE_ECB)
         return Blowfish(cipher)
 
     @property

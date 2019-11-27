@@ -11,9 +11,10 @@ class AES(object):
         self._cipher = cipher
 
     @staticmethod
-    def generate():
-        key = urandom(AES.block_size)
-        cipher = AESCipher.new(key, mode=AESCipher.MODE_ECB)
+    def generate(bits):
+        key = urandom(bits // 8)
+        key = key.rjust(AES.block_size, b'\x00')
+        cipher = AESCipher.new(key[:AES.block_size], mode=AESCipher.MODE_ECB)
         return AES(cipher)
 
     @property

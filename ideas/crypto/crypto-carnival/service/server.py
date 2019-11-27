@@ -6,11 +6,19 @@ from ciphers import AES, RSA, HMAC, Blowfish
 
 
 def main(flag):
+    print('[?] Please, input crypto security level:')
+    level = int(input())
+    if level < 512:
+        print('[-] Your level is too weak :(')
+        return
+    if level > 4096:
+        print('[-] Your level is too strong :(')
+        return
     ciphers = [
-        AES.generate(),
-        RSA.generate(randint(0x210, 0x222), 0x10001),
-        HMAC.generate(),
-        Blowfish.generate()
+        AES.generate(level),
+        RSA.generate(level, 0x10001),
+        HMAC.generate(level),
+        Blowfish.generate(level)
     ]
     ui = UI(ciphers, flag)
     ui.run()
