@@ -1,2 +1,2 @@
-task.py
-output.txt
+task/task.py
+task/output.txt
