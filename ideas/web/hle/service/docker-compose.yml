@@ -1,7 +1,0 @@
-version: '2'
-services:
-  hell:
-    build: .
-    restart: always
-    ports:
-      - "0.0.0.0:4331:9999"

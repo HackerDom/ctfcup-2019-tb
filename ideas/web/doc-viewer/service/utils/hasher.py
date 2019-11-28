@@ -1,7 +1,12 @@
 from math import sin
+from ..wsgi import HASH_SALT
 
 
 def calculate_hash(data: str) -> str:
+    return _calculate_inner(HASH_SALT + data)
+
+
+def _calculate_inner(data: str) -> str:
     A = 0x12345678
     B = 0x9ABCDEF0
     C = 0xDEADDEAD

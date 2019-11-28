@@ -1,0 +1,25 @@
+{% extends 'base_menu.html' %}
+
+{% block content %}
+    <h1>Documents list</h1>
+    {% if documents %}
+        <section class="documents">
+            {% for document in documents %}
+                <p><a href="{{ url_for('get_document', document_id=document.id) }}">{{ document.title }}</a></p>
+            {% endfor %}
+        </section>
+        <footer>
+            <a href="{{ url_for('index', page=1) }}">&lt;&lt;</a>
+            {% if previous_page %}
+                <a href="{{ url_for('index', page=previous_page) }}">{{ previous_page }}</a>
+            {% endif %}
+            <a href="#">{{ current_page }}</a>
+            {% if next_page %}
+                <a href="{{ url_for('index', page=next_page) }}">{{ next_page }}</a>
+            {% endif %}
+            <a href="{{ url_for('index', page=pages_count) }}">&gt;&gt;</a>
+        </footer>
+    {% else %}
+        <p>There are no documents now. Add a first one</p>
+    {% endif %}
+{% endblock %}
