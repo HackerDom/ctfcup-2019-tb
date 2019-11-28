@@ -10,7 +10,6 @@ from .utils.filters import add_filters
 
 ADMIN_LOGIN = "admin"
 HASH_SALT = os.environ["HASH_SALT"]
-FLAG = os.environ["FLAG"]
 
 app = Flask(__name__)
 
@@ -19,6 +18,7 @@ postgres_port = os.environ["POSTGRES_PORT"]
 postgres_db = os.environ["POSTGRES_DB"]
 postgres_user = os.environ["POSTGRES_USER"]
 postgres_password = os.environ["POSTGRES_PASSWORD"]
+
 SQLALCHEMY_DATABASE_URI = f'postgresql://{postgres_user}:{postgres_password}@{postgres_host}:{postgres_port}/{postgres_db}'
 app.config.update(
     dict(

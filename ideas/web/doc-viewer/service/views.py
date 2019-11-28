@@ -6,7 +6,7 @@ from functools import wraps
 from sqlalchemy import desc
 
 from .models import Document
-from .wsgi import app, Session, ADMIN_LOGIN, FLAG
+from .wsgi import app, Session, ADMIN_LOGIN
 from .utils.hasher import calculate_hash
 from .utils.aes import AESCipher
 
@@ -33,7 +33,7 @@ def admin_required(f):
     def decorated_function(*args, **kwargs):
         is_admin = request.cookies.get("login") == ADMIN_LOGIN
         if not is_admin:
-            return render_template("not-admin.html")
+            return render_template("error.html", message="Sorry, you can't view this page, because you are not an admin")
 
         return f(*args, **kwargs)
 
@@ -66,6 +66,30 @@ def index() -> str:
     page_info = _get_page_info(page, batch_size)
     return render_template("index.html", documents=documents, **page_info)
 
+@app.route('/document/<document_id>/edit', methods=['GET', 'POST'])
+@auth_required
+@admin_required
+def edit_document(document_id: int) -> str:
+    key = session.get('key', '')
+    document = _get_decoded_document(document_id, key)
+    if request.method == 'GET':
+        if not document:
+            return render_template('error.html', message="Can't decode document. Is it yours?")
+        return render_template('add-document.html', document=document)
+
+    new_title, new_content = request.form['title'], request.form['content']
+    doc = _get_decoded_document(document_id, key)
+    if not doc:
+        return render_template('error.html', message="Can't edit document - incorrect key.")
+
+    s = Session()
+    doc = s.query(Document).filter_by(id=doc.id).first()
+    aes = AESCipher(key)
+    doc.title = new_title
+    doc.content = aes.encrypt(new_content)
+    s.commit()
+    return redirect(url_for('index'))
+
 
 @app.route('/document/<document_id>')
 @auth_required
@@ -82,10 +106,11 @@ def get_document(document_id: int) -> str:
 def document():
     if request.method == 'GET':
         key = session.get('key', '')
-        rendered_template = render_template('add-document.html', key=key)
+        rendered_template = render_template('add-document.html', document=None)
         return render_template_string(rendered_template)
 
-    title, content, key = request.form['title'], request.form['content'], request.form['key']
+    key = session.get('key', str(uuid.uuid4()).replace("-", ""))
+    title, content = request.form['title'], request.form['content']
     s = Session()
     aes = AESCipher(key)
     s.add(Document(title, aes.encrypt(content)))
@@ -109,12 +134,9 @@ def _get_decoded_document(document_id: int, key: str) -> Document or None:
     if not doc:
         return None
 
-    print(doc.title, doc.content, key)
-
     try:
         aes = AESCipher(key)
         doc_content = aes.decrypt(doc.content)
-        print(doc_content)
         if not doc_content:
             return None
         doc.content = doc_content
@@ -139,7 +161,6 @@ def _get_page_info(page: int, batch_size: int):
     a = docs_count / batch_size
     b = 0 if a % 1 == 0 else 1
     pages_count = int(a) + b
-    print(pages_count)
 
     return {
         "current_page": page,

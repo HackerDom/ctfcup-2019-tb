@@ -5,7 +5,10 @@
     {% if documents %}
         <section class="documents">
             {% for document in documents %}
-                <p><a href="{{ url_for('get_document', document_id=document.id) }}">{{ document.title }}</a></p>
+                <p>
+                    <a href="{{ url_for('get_document', document_id=document.id) }}">{{ document.title }}</a>
+                    <a href="{{ url_for('edit_document', document_id=document.id)}}">Edit</a>
+                </p>
             {% endfor %}
         </section>
         <footer>
