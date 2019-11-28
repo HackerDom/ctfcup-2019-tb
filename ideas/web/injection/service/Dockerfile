@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 ENV FLASK_APP=wsgi.py
 ENV FLASK_ENV=development
-CMD [ "python", "-m", "flask", "run", "--host=0.0.0.0" ]
+CMD [ "gunicorn", "-b", "0.0.0.0:5000", "-w", "4", "wsgi:app" ]

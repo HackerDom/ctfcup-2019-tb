@@ -1,7 +1,7 @@
-import requests, string
+import requests, string, sys
 
-HOST = "192.168.56.101"
-PORT = 5000
+HOST = sys.argv[1]
+PORT = sys.argv[2]
 URL = f"http://{HOST}:{PORT}/"
 ADMIN_USER_NAME = "admin"
 

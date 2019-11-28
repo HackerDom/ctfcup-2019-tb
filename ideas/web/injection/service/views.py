@@ -1,7 +1,7 @@
 from flask import render_template, request
 import ldap, re, sys
 
-from .wsgi import app
+from wsgi import app
 
 
 BASEDN = "DC=ldap,DC=cup,DC=ctf"
