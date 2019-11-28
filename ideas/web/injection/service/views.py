@@ -37,5 +37,6 @@ def index() -> str:
             card = parse_card(result[0][1])
     except Exception as e:
         print(f"Error: {e}")
+        return render_template("error.html", message="Error!")
       
     return render_template("index.html", card=card)
