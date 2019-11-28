@@ -1,7 +1,7 @@
 from typing import List
 import uuid
 
-from flask import redirect, render_template, request, url_for, make_response, session, render_template_string
+from flask import redirect, render_template, request, url_for, make_response, session, render_template_string, send_file
 from functools import wraps
 from sqlalchemy import desc
 
@@ -125,6 +125,11 @@ def generate_key():
     key = str(uuid.uuid4()).replace("-", "")
     session['key'] = key
     return render_template("key.html", key=key)
+
+
+@app.route('/source')
+def send_source():
+    return send_file('utils/hasher.py')
 
 
 def _get_decoded_document(document_id: int, key: str) -> Document or None:
