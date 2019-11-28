@@ -42,9 +42,9 @@ def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
 
 s = requests.Session()
 # s.post()
-user_name = "ad"
-hash = "c377915376cf5417a836516c1ace1629b0604780"
+user_name = "adm"
+hash = "0883278afaac5d6a8e4153a0cf222b78ff577f6a"
 print(hash)
-append_data = "min"
+append_data = "in"
 new_hash = calculate_hash(hash, append_data, len(user_name) + HASH_LENGTH)
 print(user_name + append_data, new_hash)

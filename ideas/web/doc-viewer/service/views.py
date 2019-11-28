@@ -5,10 +5,10 @@ from flask import redirect, render_template, request, url_for, make_response, se
 from functools import wraps
 from sqlalchemy import desc
 
-from .models import Document
-from .wsgi import app, Session, ADMIN_LOGIN
-from .utils.hasher import calculate_hash
-from .utils.aes import AESCipher
+from models import Document
+from wsgi import app, Session, ADMIN_LOGIN
+from utils.hasher import calculate_hash
+from utils.aes import AESCipher
 
 
 def auth_required(f):

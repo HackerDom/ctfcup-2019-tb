@@ -6,4 +6,4 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 
-CMD [ "python", "-m", "flask", "run", "--host=0.0.0.0", "--port=9999" ]
+CMD [ "gunicorn", "-b", "0.0.0.0:9999", "-w", "4", "wsgi:app" ]

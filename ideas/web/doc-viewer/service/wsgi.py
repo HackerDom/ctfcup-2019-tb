@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -5,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from .utils.filters import add_filters
+from utils.filters import add_filters
 
 
 ADMIN_LOGIN = "admin"
@@ -33,7 +34,7 @@ Session = sessionmaker(bind=engine)
 db = SQLAlchemy(app)
 add_filters(app)
 
-from .views import *
-from .models import *
+from views import *
+from models import *
 
 Base.metadata.create_all(bind=engine)

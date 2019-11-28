@@ -1,4 +1,4 @@
-from .wsgi import db, Base
+from wsgi import db, Base
 
 
 class Document(Base):

@@ -1,5 +1,5 @@
 from math import sin
-from ..wsgi import HASH_SALT
+from wsgi import HASH_SALT
 
 
 def calculate_hash(data: str) -> str:
