@@ -1,9 +1,21 @@
-FROM python:3.7
+FROM keltecc/nsjail:latest
 
-ENV PYTHONUNBUFFERED 1
+RUN apt update && \
+    apt install -y python3 python3-pip
 
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
+COPY requirements.txt /app/
 
-CMD [ "gunicorn", "-b", "0.0.0.0:9999", "-w", "4", "wsgi:app" ]
+RUN python3 -m pip install -r /app/requirements.txt
+
+ADD . /app
+
+ADD nsjail/nsjail.sh /nsjail.sh
+
+RUN chmod 555 /nsjail.sh && \
+    chmod 444 /app/flag.txt
+
+WORKDIR /app/
+
+ENTRYPOINT ["/nsjail.sh"]
+CMD [ "/usr/local/bin/gunicorn", "-b", "0.0.0.0:9999", "-w", "4", "wsgi:app" ]
+

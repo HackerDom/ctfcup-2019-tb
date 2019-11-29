@@ -4,7 +4,7 @@ from math import sin
 HOST = "192.168.56.4"
 PORT = 4331
 URL = f"http://{HOST}:{PORT}/"
-HASH_LENGTH = 3
+HASH_LENGTH = 32
 
 def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
     hash_bytes = bytes.fromhex(hash)
@@ -42,9 +42,9 @@ def calculate_hash(hash: str, data: str, prev_data_length: int) -> str:
 
 s = requests.Session()
 # s.post()
-user_name = "adm"
-hash = "0883278afaac5d6a8e4153a0cf222b78ff577f6a"
+user_name = "ad"
+hash = "15a9d5aa3154ae8ad138168780a3d847ab4660d9"
 print(hash)
-append_data = "in"
+append_data = "min"
 new_hash = calculate_hash(hash, append_data, len(user_name) + HASH_LENGTH)
 print(user_name + append_data, new_hash)

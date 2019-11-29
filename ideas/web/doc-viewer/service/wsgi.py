@@ -20,7 +20,7 @@ postgres_db = os.environ["POSTGRES_DB"]
 postgres_user = os.environ["POSTGRES_USER"]
 postgres_password = os.environ["POSTGRES_PASSWORD"]
 
-SQLALCHEMY_DATABASE_URI = f'postgresql://{postgres_user}:{postgres_password}@{postgres_host}:{postgres_port}/{postgres_db}'
+SQLALCHEMY_DATABASE_URI = 'postgresql://' + postgres_user + ':' + postgres_password + '@' + postgres_host + ':' + postgres_port + '/' + postgres_db
 app.config.update(
     dict(
         SECRET_KEY=os.environ['FLASK_SECRET_KEY'],

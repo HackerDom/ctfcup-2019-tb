@@ -9,8 +9,9 @@ def add_filters(app: Flask):
 @contextfilter
 def _render_doc_content(_, value):
     try:
-        template = f"<section class='doc_content'>{value}</section>"
+        template = "<section class='doc_content'>" + value + "</section>"
         res = render_template_string(template)
         return res
     except Exception as e:
-        return f"Failed to render content - {e}"
+        return "Failed to render content."
+
