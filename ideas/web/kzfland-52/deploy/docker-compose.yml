@@ -1,13 +1,18 @@
-version: '2.3'
+version: '3'
 
 services:
+  mysql1234:
+    image: mysql:8.0.17
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: go_users
+  
   task:
-    container_name: arbacoi_wallet
-    image: image_arbacoin_wallet_image
     build: service
     restart: always
     ports:
-      - 33052:31337
-    pids_limit: 512
-    mem_limit: 128M
-    privileged: true
+      - 33097:7777
+    depends_on:
+      - mysql1234
+

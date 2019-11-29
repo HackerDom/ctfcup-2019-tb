@@ -126,7 +126,7 @@ func main() {
 	// DATABASE INIT
 	//database, _ := sql.Open( "mysql", "root:toor@/go_users" )
 
-	conn, err := sqlx.Connect( "mysql", "root:toor@tcp(localhost:3306)/go_users" )
+	conn, err := sqlx.Connect( "mysql", "root:toor@tcp(mysql:3306)/go_users" )
 	
 	if err != nil {
 		panic(err)

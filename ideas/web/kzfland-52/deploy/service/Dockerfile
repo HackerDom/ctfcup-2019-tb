@@ -8,4 +8,8 @@ ADD --chown=root ./templates/ /templates/
 
 WORKDIR /
 
-ENTRYPOINT /main
+ADD run.sh /
+
+RUN chmod 555 /run.sh
+
+ENTRYPOINT /run.sh
