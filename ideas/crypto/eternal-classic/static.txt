@@ -1,0 +1,2 @@
+task/task.py
+task/output.txt
