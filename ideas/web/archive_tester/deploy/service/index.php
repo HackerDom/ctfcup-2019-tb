@@ -32,9 +32,9 @@ if ( $_FILES[ 'zipfile' ][ 'name' ] )
 		die();
  	}
 
- 	$tmp_file = '/var/www/html/tmp/upload_' . gen_name();
+ 	$tmp_file = '/tmp/upload_' . gen_name();
 
- 	exec( 'unzip -o ' . $_FILES[ 'zipfile' ][ 'tmp_name' ] . ' -d ' . $tmp_file );
+ 	passthru( 'unzip -o ' . $_FILES[ 'zipfile' ][ 'tmp_name' ] . ' -d ' . $tmp_file );
  	echo "Zip contents: <br>";
 
  	passthru( "cat $tmp_file/* 2>&1" );

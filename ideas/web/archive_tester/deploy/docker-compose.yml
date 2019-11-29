@@ -1,0 +1,21 @@
+version: '2.3'
+
+services:
+  task:
+    build: service
+    restart: always
+    pids_limit: 512
+    mem_limit: 128M
+    volumes:
+      - ./service/php/logs/:/var/log/php/
+  nginx:
+    image: nginx
+    restart: always
+    depends_on:
+      - task
+    ports:
+      - 33098:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/logs/:/var/log/nginx/
+
