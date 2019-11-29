@@ -1,0 +1,14 @@
+version: '2.3'
+
+services:
+  task:
+    container_name: arbacoin_wallet
+    image: image_arbacoin_wallet
+    build: app
+    restart: always
+    ports:
+      - 33077:7171
+    pids_limit: 512
+    mem_limit: 128M
+    privileged: true
+

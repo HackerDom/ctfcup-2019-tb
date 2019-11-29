@@ -437,3 +437,6 @@
 [I][2019-11-23T20:24:54+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:185.66.87.117]:33274'
 [I][2019-11-23T20:25:24+0000] pid=14 run time >= time limit (30 >= 30) ([::ffff:185.66.87.117]:33274). Killing it
 [I][2019-11-23T20:25:24+0000] pid=14 ([::ffff:185.66.87.117]:33274) terminated with signal: SIGKILL (9), (PIDs left: 0)
+[I][2019-11-28T23:55:45+0000] New connection from: [::ffff:94.25.172.81]:27495 on: [::ffff:172.20.0.2]:31337
+[I][2019-11-28T23:55:45+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:94.25.172.81]:27495'
+[I][2019-11-28T23:55:46+0000] pid=17 ([::ffff:94.25.172.81]:27495) exited with status: 255, (PIDs left: 0)
