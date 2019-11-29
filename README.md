@@ -50,7 +50,7 @@
 
 В папке [ideas](ideas/) находятся 33 таска из 7 категорий:
 
-| Категория | Таск | Количество решений | Автор |
+| Категория | Таск | Решения | Автор |
 |-----------|------|-----------|-------|
 | Stegano | [**Eyes Training**](ideas/stegano/eyes-training) | 20 | [@keltecc](https://github.com/keltecc) |
 | Stegano | [**Leaked Docs**](ideas/stegano/leaked-docs) | 3 | [@keltecc](https://github.com/keltecc) |
