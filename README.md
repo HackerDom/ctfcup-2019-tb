@@ -85,3 +85,12 @@
 | Web | [**Injection?**](ideas/web/injection) | 13 | [@Leofwin](https://github.com/leofwin) |
 | Web | [**Kzfland-52**](ideas/web/kzfland-52) | 8 | [@revker](https://github.com/revervand) |
 | Web | [**Doc Viewer**](ideas/web/doc-viewer) | 5 | [@Leofwin](https://github.com/leofwin) |
+
+
+## Скриншоты
+
+[Скриншот полной страницы со скорбордом](screenshots/1.png)
+
+[Скриншот полной страницы с тасками](screenshots/2.png)
+
+[Скриншот полной страницы со статистикой](screenshots/3.png)
