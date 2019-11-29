@@ -437,21 +437,3 @@
 [I][2019-11-23T20:24:54+0000] Executing '/var/task/ld-2.27.so' for '[::ffff:185.66.87.117]:33274'
 [I][2019-11-23T20:25:24+0000] pid=14 run time >= time limit (30 >= 30) ([::ffff:185.66.87.117]:33274). Killing it
 [I][2019-11-23T20:25:24+0000] pid=14 ([::ffff:185.66.87.117]:33274) terminated with signal: SIGKILL (9), (PIDs left: 0)
-[I][2019-11-24T10:54:15+0000] Mode: LISTEN_TCP
-[I][2019-11-24T10:54:15+0000] Jail parameters: hostname:'jail', chroot:'/chroot/', process:'/var/task/ld-2.29.so', bind:[::]:31337, max_conns_per_ip:0, time_limit:30, personality:0, daemonize:false, clone_newnet:false, clone_newuser:true, clone_newns:true, clone_newpid:true, clone_newipc:true, clone_newuts:true, clone_newcgroup:true, keep_caps:false, disable_no_new_privs:false, max_cpus:0
-[I][2019-11-24T10:54:15+0000] Mount: '/chroot/' -> '/' flags:MS_RDONLY|MS_BIND|MS_REC|MS_PRIVATE type:'' options:'' dir:true
-[I][2019-11-24T10:54:15+0000] Mount: '/proc' flags:MS_RDONLY type:'proc' options:'' dir:true
-[I][2019-11-24T10:54:15+0000] Uid map: inside_uid:65534 outside_uid:0 count:1 newuidmap:false
-[W][2019-11-24T10:54:15+0000][8] void cmdline::logParams(nsjconf_t*)():254 Process will be UID/EUID=0 in the global user namespace, and will have user root-level access to files
-[I][2019-11-24T10:54:15+0000] Gid map: inside_gid:65534 outside_gid:0 count:1 newgidmap:false
-[W][2019-11-24T10:54:15+0000][8] void cmdline::logParams(nsjconf_t*)():264 Process will be GID/EGID=0 in the global user namespace, and will have group root-level access to files
-[I][2019-11-24T10:54:15+0000] Listening on [::]:31337
-[I][2019-11-24T10:54:29+0000] New connection from: [::ffff:172.28.0.1]:49514 on: [::ffff:172.28.0.2]:31337
-[I][2019-11-24T10:54:29+0000] Executing '/var/task/ld-2.29.so' for '[::ffff:172.28.0.1]:49514'
-[I][2019-11-24T10:54:36+0000] pid=9 ([::ffff:172.28.0.1]:49514) exited with status: 255, (PIDs left: 0)
-[I][2019-11-24T10:55:34+0000] New connection from: [::ffff:172.28.0.1]:49518 on: [::ffff:172.28.0.2]:31337
-[I][2019-11-24T10:55:34+0000] Executing '/var/task/ld-2.29.so' for '[::ffff:172.28.0.1]:49518'
-[I][2019-11-24T10:55:38+0000] pid=10 ([::ffff:172.28.0.1]:49518) exited with status: 0, (PIDs left: 0)
-[I][2019-11-28T23:56:17+0000] New connection from: [::ffff:94.25.172.81]:27495 on: [::ffff:172.28.0.2]:31337
-[I][2019-11-28T23:56:17+0000] Executing '/var/task/ld-2.29.so' for '[::ffff:94.25.172.81]:27495'
-[I][2019-11-28T23:56:18+0000] pid=12 ([::ffff:94.25.172.81]:27495) exited with status: 255, (PIDs left: 0)

@@ -178,6 +178,3 @@
 [I][2019-11-23T20:50:11+0000] Executing '/var/task/arbalest_shop' for '[::ffff:172.21.0.1]:38936'
 [I][2019-11-23T20:50:41+0000] pid=10 run time >= time limit (30 >= 30) ([::ffff:172.21.0.1]:38936). Killing it
 [I][2019-11-23T20:50:41+0000] pid=10 ([::ffff:172.21.0.1]:38936) terminated with signal: SIGKILL (9), (PIDs left: 0)
-[I][2019-11-28T23:56:05+0000] New connection from: [::ffff:94.25.172.81]:27495 on: [::ffff:172.21.0.2]:31337
-[I][2019-11-28T23:56:05+0000] Executing '/var/task/arbalest_shop' for '[::ffff:94.25.172.81]:27495'
-[I][2019-11-28T23:56:06+0000] pid=13 ([::ffff:94.25.172.81]:27495) exited with status: 255, (PIDs left: 0)
