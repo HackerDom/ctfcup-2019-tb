@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if error %}
+        <section class="error">
+            {{ error }}
+        </section>
+    {% endif %}
+    <section class="login">
+        <h1>Enter your login</h1>
+        <form action="{{ url_for("auth") }}" method="POST" class="form">
+            <label><input type="text" name="login" placeholder="Login"></label>
+            <button class="button">Log In</button>
+        </form>
+    </section>
+{% endblock %}

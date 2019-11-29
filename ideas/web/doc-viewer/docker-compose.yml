@@ -1,0 +1,24 @@
+version: '2.3'
+
+services:
+  task:
+    build: service
+    restart: always
+    depends_on:
+      - db
+    pids_limit: 512
+    mem_limit: 128M
+    privileged: true
+    ports:
+      - 4331:9999
+    volumes:
+      - ./service/nsjail/logs/:/var/log/nsjail/
+    env_file:
+      - ./db.env
+      - ./service.env
+
+  db:
+    image: 'postgres:10.6'
+    restart: always
+    env_file:
+      - ./db.env

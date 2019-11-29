@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <a href="{{ url_for('generate_key') }}">Generate new key</a>
+    <a href="{{ url_for('index') }}">All documents</a>
+    <a href="{{ url_for('document') }}">Create document</a>
+{% endblock %}

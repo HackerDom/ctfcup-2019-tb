@@ -1,0 +1,6 @@
+flask
+flask_sqlalchemy
+sqlalchemy
+psycopg2-binary
+pycryptodome
+gunicorn

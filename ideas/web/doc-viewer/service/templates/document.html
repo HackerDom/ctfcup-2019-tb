@@ -1,0 +1,14 @@
+{% extends 'base_menu.html' %}
+
+{% block content %}
+    {% if document %}
+        <section class="document">
+            <h1>{{ document.title }}</h1>
+            <section class="content">
+                {{ document.content | render_content | safe }}
+            </section>
+        </section>
+    {% else %}
+        <p>Error: bad document id or could not decode document (is it your document?)</p>
+    {% endif %}
+{% endblock %}

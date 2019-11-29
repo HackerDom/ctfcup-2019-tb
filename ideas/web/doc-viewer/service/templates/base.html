@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DocViewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <menu>
+        {% block menu %}{% endblock %}
+    </menu>
+    <main>
+        <article>
+            {% block content %}{% endblock %}
+        </article>
+    </main>
+</body>
+</html>
