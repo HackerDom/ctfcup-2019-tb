@@ -38,7 +38,7 @@
 Куратор этапа — [Владимир Черепанов](https://github.com/keltecc)
 
 Авторы заданий:
-- [Владмир Черепанов](https://github.com/keltecc)
+- [Владимир Черепанов](https://github.com/keltecc)
 - [Георгий Кигурадзе](https://github.com/revervand)
 - [Андрей Чуприлин](https://github.com/leofwin)
 - [Александр Котов](https://github.com/Exorcist359)
@@ -48,40 +48,40 @@
 
 ## Таски
 
-В папке [ideas](ideas/) находятся 7 категорий сложности:
+В папке [ideas](ideas/) находятся 33 таска из 7 категорий:
 
-| Категория | Таск | Стоимость | Автор |
+| Категория | Таск | Количество решений | Автор |
 |-----------|------|-----------|-------|
-| Stegano | [**Eyes Training**](ideas/stegano/eyes-training) | 100 | [@keltecc](https://github.com/keltecc) |
-| Stegano | [**Leaked Docs**](ideas/stegano/leaked-docs) | 496 | [@keltecc](https://github.com/keltecc) |
-| Stegano | [**Voice Message**](ideas/stegano/voice-message) | 500 | [@keltecc](https://github.com/keltecc) |
-| Forensics | [**The Best Browser**](ideas/forensic/memdump/commands.md) | 184 | [@Leofwin](https://github.com/leofwin) |
-| Forensics | [**Useless Hash**](ideas/forensic/memdump/password.md) | 259 | [@Leofwin](https://github.com/leofwin) |
-| Forensics | [**Notepass**](ideas/forensic/memdump/notepad.md) | 440 | [@Leofwin](https://github.com/leofwin) |
-| Forensics | [**Police Department**](ideas/forensic/police_department) | 500 | [@Alex_Kotov](https://github.com/Exorcist359) |
-| Crypto | [**Eternal Classic**](ideas/crypto/eternal-classic) | 456 | [@keltecc](https://github.com/keltecc) |
-| Crypto | [**Flag Checker**](ideas/crypto/flag-checker) | 499 | [@keltecc](https://github.com/keltecc) |
-| Crypto | [**Coin Flipping**](ideas/crypto/coin-flipping) | 499 | [@keltecc](https://github.com/keltecc) |
-| Crypto | [**The Matrix**](ideas/crypto/the-matrix) | 500 | [@keltecc](https://github.com/keltecc) |
-| Crypto | [**Crypto Carnival**](ideas/crypto/crypto-carnival) | 500 | [@keltecc](https://github.com/keltecc) |
-| Crypto | [**Big Secret**](ideas/crypto/big-secret) | 500 | [@keltecc](https://github.com/keltecc) |
-| Reverse | [**Resistance Test Task**](ideas/crypto/resistance_test_task) | 496 | [@revker](https://github.com/revervand) |
-| Reverse | [**Arbacoin Wallet**](ideas/crypto/arbacoin_wallet) | 496 | [@revker](https://github.com/revervand) |
-| Reverse | [**Remote Auth Server**](ideas/crypto/remote_auth_server) | 499 | [@revker](https://github.com/revervand) |
-| Reverse | [**Arbacoin Secret Market**](ideas/crypto/arbacoin_secret_market) | 500 | [@revker](https://github.com/revervand) |
-| Reverse | [**Moore's Law**](ideas/crypto/moore-s-law) | 500 | [@keltecc](https://github.com/keltecc) |
-| Reverse | [**Oldschool**](ideas/crypto/oldschool) | 500 | [@keltecc](https://github.com/keltecc) |
-| Pwn | [**Arbacoin Bank**](ideas/crypto/arbacoin_bank) | 499 | [@revker](https://github.com/revervand) |
-| Pwn | [**Heap**](ideas/crypto/heap) | 499 | [@keltecc](https://github.com/keltecc) |
-| Pwn | [**Arbalest Shop**](ideas/crypto/arbalest_shop) | 500 | [@revker](https://github.com/revervand) |
-| Pwn | [**Teleport**](ideas/crypto/teleport) | 500 | [@revker](https://github.com/revervand) |
-| Misc | [**Captcha Server**](ideas/crypto/captcha_server) | 100 | [@revker](https://github.com/revervand) |
-| Misc | [**joKER's trap**](ideas/crypto/pyjail) | 223 | [@revker](https://github.com/revervand) |
-| Misc | [**Hidden Message**](ideas/crypto/hidden_message) | 351 | [@revker](https://github.com/revervand) |
-| Misc | [**IQ Test**](ideas/crypto/iq-test) | 400 | [@keltecc](https://github.com/keltecc) |
-| Misc | [**Strange IDB**](ideas/crypto/strange_idb) | 499 | [@revker](https://github.com/revervand) |
-| Misc | [**Illegal Flag**](ideas/crypto/illegal-flag) | 499 | [@keltecc](https://github.com/keltecc) |
-| Web | [**Archive Tester**](ideas/crypto/archive_tester) | 144 | [@revker](https://github.com/revervand) |
-| Web | [**Injection?**](ideas/crypto/injection) | 323 | [@Leofwin](https://github.com/leofwin) |
-| Web | [**Kzfland-52**](ideas/crypto/kzfland-52) | 440 | [@revker](https://github.com/revervand) |
-| Web | [**Doc Viewer**](ideas/crypto/doc-viewer) | 481 | [@Leofwin](https://github.com/leofwin) |
+| Stegano | [**Eyes Training**](ideas/stegano/eyes-training) | 20 | [@keltecc](https://github.com/keltecc) |
+| Stegano | [**Leaked Docs**](ideas/stegano/leaked-docs) | 3 | [@keltecc](https://github.com/keltecc) |
+| Stegano | [**Voice Message**](ideas/stegano/voice-message) | 0 | [@keltecc](https://github.com/keltecc) |
+| Forensics | [**The Best Browser**](ideas/forensic/memdump/commands.md) | 17 | [@Leofwin](https://github.com/leofwin) |
+| Forensics | [**Useless Hash**](ideas/forensic/memdump/password.md) | 15 | [@Leofwin](https://github.com/leofwin) |
+| Forensics | [**Notepass**](ideas/forensic/memdump/notepad.md) | 8 | [@Leofwin](https://github.com/leofwin) |
+| Forensics | [**Police Department**](ideas/forensic/police_department) | 1 | [@Alex_Kotov](https://github.com/Exorcist359) |
+| Crypto | [**Eternal Classic**](ideas/crypto/eternal-classic) | 7 | [@keltecc](https://github.com/keltecc) |
+| Crypto | [**Flag Checker**](ideas/crypto/flag-checker) | 2 | [@keltecc](https://github.com/keltecc) |
+| Crypto | [**Coin Flipping**](ideas/crypto/coin-flipping) | 2 | [@keltecc](https://github.com/keltecc) |
+| Crypto | [**The Matrix**](ideas/crypto/the-matrix) | 0 | [@keltecc](https://github.com/keltecc) |
+| Crypto | [**Crypto Carnival**](ideas/crypto/crypto-carnival) | 0 | [@keltecc](https://github.com/keltecc) |
+| Crypto | [**Big Secret**](ideas/crypto/big-secret) | 0 | [@keltecc](https://github.com/keltecc) |
+| Reverse | [**Resistance Test Task**](ideas/reverse/resistance_test_task) | 3 | [@revker](https://github.com/revervand) |
+| Reverse | [**Arbacoin Wallet**](ideas/reverse/arbacoin_wallet) | 3 | [@revker](https://github.com/revervand) |
+| Reverse | [**Remote Auth Server**](ideas/reverse/remote_auth_server) | 2 | [@revker](https://github.com/revervand) |
+| Reverse | [**Arbacoin Secret Market**](ideas/reverse/arbacoin_secret_market) | 1 | [@revker](https://github.com/revervand) |
+| Reverse | [**Moore's Law**](ideas/reverse/moore-s-law) | 0 | [@keltecc](https://github.com/keltecc) |
+| Reverse | [**Oldschool**](ideas/reverse/oldschool) | 0 | [@keltecc](https://github.com/keltecc) |
+| Pwn | [**Arbacoin Bank**](ideas/pwn/arbacoin_bank) | 2 | [@revker](https://github.com/revervand) |
+| Pwn | [**Heap**](ideas/pwn/heap) | 2 | [@keltecc](https://github.com/keltecc) |
+| Pwn | [**Arbalest Shop**](ideas/pwn/arbalest_shop) | 0 | [@revker](https://github.com/revervand) |
+| Pwn | [**Teleport**](ideas/pwn/teleport) | 1 | [@revker](https://github.com/revervand) |
+| Misc | [**Captcha Server**](ideas/misc/captcha_server) | 19 | [@revker](https://github.com/revervand) |
+| Misc | [**joKER's trap**](ideas/misc/pyjail) | 16 | [@revker](https://github.com/revervand) |
+| Misc | [**Hidden Message**](ideas/misc/hidden_message) | 12 | [@revker](https://github.com/revervand) |
+| Misc | [**IQ Test**](ideas/misc/iq-test) | 10 | [@keltecc](https://github.com/keltecc) |
+| Misc | [**Strange IDB**](ideas/misc/strange_idb) | 2 | [@revker](https://github.com/revervand) |
+| Misc | [**Illegal Flag**](ideas/misc/illegal-flag) | 2 | [@keltecc](https://github.com/keltecc) |
+| Web | [**Archive Tester**](ideas/web/archive_tester) | 18 | [@revker](https://github.com/revervand) |
+| Web | [**Injection?**](ideas/web/injection) | 13 | [@Leofwin](https://github.com/leofwin) |
+| Web | [**Kzfland-52**](ideas/web/kzfland-52) | 8 | [@revker](https://github.com/revervand) |
+| Web | [**Doc Viewer**](ideas/web/doc-viewer) | 5 | [@Leofwin](https://github.com/leofwin) |
